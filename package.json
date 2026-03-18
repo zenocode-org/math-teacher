@@ -1,0 +1,30 @@
+{
+  "name": "my-maitre",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "vite build --config vite.standalone.config.ts",
+    "build:astro": "astro build && node scripts/fix-relative-paths.mjs",
+    "preview": "astro preview",
+    "serve": "npx --yes serve dist",
+    "astro": "astro",
+    "generate-example": "node scripts/generate-example-excel.mjs"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.0",
+    "astro": "^6.0.5",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "vite-plugin-arraybuffer": "^0.1.4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "tailwindcss": "^4.2.2",
+    "vite-plugin-singlefile": "^2.3.2"
+  }
+}
